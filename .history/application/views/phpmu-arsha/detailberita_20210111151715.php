@@ -11,7 +11,7 @@ $total_komentar = $this->model_utama->view_where('komentar', array('id_berita' =
 			<!-- Title -->
 			<div class="card">
 				<div class="card-body">
-					<h1 style="font-family: Cabin;"><?php echo "<b>$rows[judul]</b> <br><span style='font-size:14px; color:blue'>$rows[sub_judul] </span>"; ?></h1>
+					<h1 style="font-family: cabin;"><?php echo "<b>$rows[judul]</b> <br><span style='font-size:14px; color:blue'>$rows[sub_judul] </span>"; ?></h1>
 					<!-- Author -->
 					<p class="lead">
 						by
@@ -19,8 +19,7 @@ $total_komentar = $this->model_utama->view_where('komentar', array('id_berita' =
 					</p>
 					<hr>
 					<!-- Date/Time -->
-					<p>Posted on <span class="badge badge-success"> <?php echo tgl_indo($rows['tanggal']) . ", $rows[jam] WIB"; ?></span></p>
-
+					<p>Posted on <?php echo tgl_indo($rows['tanggal']) . ", $rows[jam] WIB"; ?></p>
 					<hr>
 					<!-- Preview Image -->
 					<?php
@@ -129,12 +128,14 @@ $total_komentar = $this->model_utama->view_where('komentar', array('id_berita' =
 		<div class="col-md-4">
 			<!-- Search Widget -->
 			<div class="card my-4">
-				<h5 class="card-header">Share this Article</h5>
+				<h5 class="card-header">Search</h5>
 				<div class="card-body">
-					<script language="javascript">
-						document.write("<a href='http://www.facebook.com/share.php?u=" + document.URL + " ' target='_blank' class='custom-soc icon-text'>&#62220;</a> <a href='http://twitter.com/home/?status=" + document.URL + "' target='_blank' class='custom-soc icon-text'>&#62217;</a> <a href='https://plus.google.com/share?url=" + document.URL + "' target='_blank' class='custom-soc icon-text'>&#62223;</a>");
-					</script>
-
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Search for...">
+						<span class="input-group-append">
+							<button class="btn btn-secondary" type="button">Go!</button>
+						</span>
+					</div>
 				</div>
 			</div>
 

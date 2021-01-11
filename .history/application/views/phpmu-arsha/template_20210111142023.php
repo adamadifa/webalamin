@@ -122,17 +122,7 @@
 
 	<!-- Template Main JS File -->
 	<script src="<?php echo base_url(); ?>template/<?php echo template(); ?>/assets/js/main.js"></script>
-	<script>
-		$(function() {
-			function toggleZoomScreen() {
-				var width = window.screen.width;
-				if (width <= 1366) {
-					document.body.style.zoom = "80%";
-				}
-			}
-			toggleZoomScreen();
-		});
-	</script>
+
 </body>
 
 </html>

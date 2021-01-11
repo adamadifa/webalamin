@@ -134,7 +134,8 @@ $total_komentar = $this->model_utama->view_where('komentar', array('id_berita' =
 					<script language="javascript">
 						document.write("<a href='http://www.facebook.com/share.php?u=" + document.URL + " ' target='_blank' class='custom-soc icon-text'>&#62220;</a> <a href='http://twitter.com/home/?status=" + document.URL + "' target='_blank' class='custom-soc icon-text'>&#62217;</a> <a href='https://plus.google.com/share?url=" + document.URL + "' target='_blank' class='custom-soc icon-text'>&#62223;</a>");
 					</script>
-
+					<a href="#" class="custom-soc icon-text">&#62232;</a>
+					<a href="#" class="custom-soc icon-text">&#62226;</a>
 				</div>
 			</div>
 

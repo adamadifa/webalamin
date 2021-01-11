@@ -52,7 +52,7 @@
 								<div class='accordion-list mt-3'>
 									<ul>
 										<li>
-											<a data-toggle='collapse' class='collapse' href='#accordion-list-1'><span style="color:orange">01</span> Mahabbah - محبة <i class='bx bx-chevron-down icon-show'></i><i class='bx bx-chevron-up icon-close'></i></a>
+											<a data-toggle='collapse' class='collapse' href='#accordion-list-1'><span>01</span> Mahabbah - محبة <i class='bx bx-chevron-down icon-show'></i><i class='bx bx-chevron-up icon-close'></i></a>
 											<div id='accordion-list-1' class='collapse show' data-parent='.accordion-list'>
 												<p>
 													Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur
@@ -62,7 +62,7 @@
 										</li>
 
 										<li>
-											<a data-toggle='collapse' href='#accordion-list-2' class='collapsed'><span style="color:orange">02</span> Ta'awun - تعاون <i class='bx bx-chevron-down icon-show'></i><i class='bx bx-chevron-up icon-close'></i></a>
+											<a data-toggle='collapse' href='#accordion-list-2' class='collapsed'><span>02</span> Ta'awun - تعاون <i class='bx bx-chevron-down icon-show'></i><i class='bx bx-chevron-up icon-close'></i></a>
 											<div id='accordion-list-2' class='collapse' data-parent='.accordion-list'>
 												<p>
 													Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet
@@ -74,7 +74,7 @@
 										</li>
 
 										<li>
-											<a data-toggle='collapse' href='#accordion-list-3' class='collapsed'><span style="color:orange">03</span> Mujahadah - مجاھدة <i class='bx bx-chevron-down icon-show'></i><i class='bx bx-chevron-up icon-close'></i></a>
+											<a data-toggle='collapse' href='#accordion-list-3' class='collapsed'><span>03</span> Mujahadah - مجاھدة <i class='bx bx-chevron-down icon-show'></i><i class='bx bx-chevron-up icon-close'></i></a>
 											<div id='accordion-list-3' class='collapse' data-parent='.accordion-list'>
 												<p>
 													Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar
@@ -85,7 +85,7 @@
 											</div>
 										</li>
 										<li>
-											<a data-toggle='collapse' href='#accordion-list-4' class='collapsed'><span style="color:orange">04</span> Amanah - أمانة <i class='bx bx-chevron-down icon-show'></i><i class='bx bx-chevron-up icon-close'></i></a>
+											<a data-toggle='collapse' href='#accordion-list-4' class='collapsed'><span>04</span> Amanah - أمانة <i class='bx bx-chevron-down icon-show'></i><i class='bx bx-chevron-up icon-close'></i></a>
 											<div id='accordion-list-4' class='collapse' data-parent='.accordion-list'>
 												<p>
 													Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar
@@ -96,7 +96,7 @@
 											</div>
 										</li>
 										<li>
-											<a data-toggle='collapse' href='#accordion-list-5' class='collapsed'><span style="color:orange">05</span> Tawadu' - تواضع <i class='bx bx-chevron-down icon-show'></i><i class='bx bx-chevron-up icon-close'></i></a>
+											<a data-toggle='collapse' href='#accordion-list-5' class='collapsed'><span>05</span> Tawadu' - تواضع <i class='bx bx-chevron-down icon-show'></i><i class='bx bx-chevron-up icon-close'></i></a>
 											<div id='accordion-list-5' class='collapse' data-parent='.accordion-list'>
 												<p>
 													Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar

@@ -11,16 +11,15 @@ $total_komentar = $this->model_utama->view_where('komentar', array('id_berita' =
 			<!-- Title -->
 			<div class="card">
 				<div class="card-body">
-					<h1 style="font-family: Cabin;"><?php echo "<b>$rows[judul]</b> <br><span style='font-size:14px; color:blue'>$rows[sub_judul] </span>"; ?></h1>
+					<h1><?php echo "<b>$rows[judul]</b> <br><span style='font-size:14px; color:blue'>$rows[sub_judul] </span>"; ?></h1>
 					<!-- Author -->
 					<p class="lead">
 						by
-						<span class="badge badge-warning"><?php echo "$rows[nama_lengkap]"; ?></span>
+						<b><?php echo "$rows[nama_lengkap]"; ?></b>
 					</p>
 					<hr>
 					<!-- Date/Time -->
-					<p>Posted on <span class="badge badge-success"> <?php echo tgl_indo($rows['tanggal']) . ", $rows[jam] WIB"; ?></span></p>
-
+					<p>Posted on <?php echo tgl_indo($rows['tanggal']) . ", $rows[jam] WIB"; ?></p>
 					<hr>
 					<!-- Preview Image -->
 					<?php
@@ -34,42 +33,21 @@ $total_komentar = $this->model_utama->view_where('komentar', array('id_berita' =
 
 					<hr>
 					<!-- Post Content -->
-					<?php
-					$paragraph = explode("</p>", $rows['isi_berita']);
-					if (empty($paragraph[3])) {
-						$content = $paragraph[0] . $paragraph[1] . $paragraph[2] . "</p>";
-					} else {
-						$content = $paragraph[0] . $paragraph[1] . $paragraph[2] . "</p>";
-						$content .= "<h4>Baca Lainnya : </h4><ul>";
-						$pisah_kata  = explode(",", $rows['tag']);
-						$jml_katakan = (int)count($pisah_kata);
-						$jml_kata = $jml_katakan - 1;
-						$ambil_id = substr($rows['id_berita'], 0, 4);
-						$cari = "SELECT * FROM berita WHERE (id_berita<'$ambil_id') and (id_berita!='$ambil_id') and (";
-						for ($i = 0; $i <= $jml_kata; $i++) {
-							$cari .= "tag LIKE '%$pisah_kata[$i]%'";
-							if ($i < $jml_kata) {
-								$cari .= " OR ";
-							}
-						}
-						$cari .= ") ORDER BY id_berita DESC LIMIT 5";
-						$hasil  = $this->db->query($cari);
-						foreach ($hasil->result_array() as $row) {
-							$total_komentar_terkait = $this->model_utama->view_where('komentar', array('id_berita' => $row['id_berita']))->num_rows();
-							$content .= "<li style='padding:0px'><a style='color:blue' href='" . base_url() . "$row[judul_seo]''>$row[judul]</a><a href='#' class='h-comment'>$total_komentar_terkait</a></li>";
-						}
-						$content .= "</ul>";
+					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
 
-						for ($i = 3; $i <= count($paragraph) - 1; $i++) {
-							$content .= $paragraph[$i];
-						}
-					}
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
 
-					echo "$content<hr>
-								<div class='fb-like'  data-href='" . base_url() . "$rows[judul_seo]' 
-									data-send='false'  data-width='600' data-show-faces='false'>
-								</div> <br><br>";
-					?>
+					<blockquote class="blockquote">
+						<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+						<footer class="blockquote-footer">Someone famous in
+							<cite title="Source Title">Source Title</cite>
+						</footer>
+					</blockquote>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>
 
 					<hr>
 
@@ -129,12 +107,14 @@ $total_komentar = $this->model_utama->view_where('komentar', array('id_berita' =
 		<div class="col-md-4">
 			<!-- Search Widget -->
 			<div class="card my-4">
-				<h5 class="card-header">Share this Article</h5>
+				<h5 class="card-header">Search</h5>
 				<div class="card-body">
-					<script language="javascript">
-						document.write("<a href='http://www.facebook.com/share.php?u=" + document.URL + " ' target='_blank' class='custom-soc icon-text'>&#62220;</a> <a href='http://twitter.com/home/?status=" + document.URL + "' target='_blank' class='custom-soc icon-text'>&#62217;</a> <a href='https://plus.google.com/share?url=" + document.URL + "' target='_blank' class='custom-soc icon-text'>&#62223;</a>");
-					</script>
-
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Search for...">
+						<span class="input-group-append">
+							<button class="btn btn-secondary" type="button">Go!</button>
+						</span>
+					</div>
 				</div>
 			</div>
 
